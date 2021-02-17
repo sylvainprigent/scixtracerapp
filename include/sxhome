@@ -1,0 +1,5 @@
+#include "../src/sxhome/SxHomeComponent.h"
+#include "../src/sxhome/SxHomeNavbarWidget.h"
+#include "../src/sxhome/SxHomeTileInfo.h"
+#include "../src/sxhome/SxHomeTileWidget.h"
+#include "../src/sxhome/SxHomeWidget.h"

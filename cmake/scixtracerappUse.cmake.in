@@ -1,0 +1,31 @@
+############################################################
+#
+#
+# Copyright (c) scixtracerapp 2020
+#
+# AUTHOR:
+# Sylvain Prigent 
+# 
+######################################################################
+## 
+### Commentary: 
+## 
+######################################################################
+## 
+### Change log:
+## 
+######################################################################
+
+if(NOT scixtracerapp_USE_FILE_INCLUDED)
+
+   set(scixtracerapp_USE_FILE_INCLUDED 1)
+
+   include_directories(${scixtracerapp_INCLUDE_DIRS})
+
+   link_directories(${scixtracerapp_LIBRARY_DIRS})
+
+   set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${scixtracerapp_CMAKE_DIR})
+
+   include(scixtracerappDependencies)
+   
+endif(NOT scixtracerapp_USE_FILE_INCLUDED)

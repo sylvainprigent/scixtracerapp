@@ -1,0 +1,7 @@
+#include "../src/sxframework/SxAction.h"
+#include "../src/sxframework/SxActuator.h"
+#include "../src/sxframework/SxComponent.h"
+#include "../src/sxframework/SxContainer.h"
+#include "../src/sxframework/SxModel.h"
+#include "../src/sxframework/SxfObject.h"
+#include "../src/sxframework/SxStates.h"

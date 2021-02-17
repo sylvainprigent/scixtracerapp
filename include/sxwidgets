@@ -1,0 +1,5 @@
+#include "../src/sxwidgets/SxClickableIcon.h"
+#include "../src/sxwidgets/SxClosableButton.h"
+#include "../src/sxwidgets/SxFlowLayout.h"
+#include "../src/sxwidgets/SxHideableWidget.h"
+#include "../src/sxwidgets/SxSlidingStackedWidget.h"

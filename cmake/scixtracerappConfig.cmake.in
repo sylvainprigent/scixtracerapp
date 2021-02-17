@@ -1,0 +1,14 @@
+IF(UNIX)
+  SET(scixtracerapp_LIB_NAME "libscixtracerapp.a")
+ELSEIF(WIN32)
+  SET(scixtracerapp_LIB_NAME "scixtracerapp.lib")
+ENDIF(UNIX)
+
+SET(scixtracerapp_INCLUDE_DIRS "@scixtracerapp_INCLUDE_DIR@")
+SET(scixtracerapp_LIBRARY_DIRS "@scixtracerapp_LIBRARY_DIR@")
+SET(scixtracerapp_LIBRARIES ${scixtracerapp_LIB_NAME})
+
+SET(scixtracerapp_USE_FILE "@scixtracerapp_USE_FILE@")
+SET(scixtracerapp_CMAKE_DIR "@scixtracerapp_CMAKE_DIR@")
+
+MARK_AS_ADVANCED(scixtracerapp_LIBRARIES scixtracerapp_LIBRARY_DIR scixtracerapp_INCLUDE_DIRS scixtracerapp_USE_FILE)
