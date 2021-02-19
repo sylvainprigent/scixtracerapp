@@ -25,4 +25,4 @@ SET(SRC_FILES
 SET(NAME SciXtracerApp)
 SET(FILE ${SRC_FILES} demo.cpp )
 add_executable( ${NAME} ${FILE} )
-target_link_libraries(${NAME} scixtracerapp ${SL_LIBRARIES})
+target_link_libraries(${NAME} sxframework scixtracerapp ${SL_LIBRARIES})

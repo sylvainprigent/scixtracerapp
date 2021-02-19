@@ -1,15 +1,15 @@
-#include <QtWidgets>
+#include <scixtracerapp>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     QCoreApplication::setOrganizationName("Inria");
-    QCoreApplication::setApplicationName("SIMageViewer demo");
+    QCoreApplication::setApplicationName("SciXtracer app demo");
     QCoreApplication::setApplicationVersion(QT_VERSION_STR);
 
-    QLabel label("Demo not yet impemented");
-    label.show();
+    SxExperimentComponent experimentComponent;
+    experimentComponent.getWidget()->show();
 
-    app.setStyleSheet("file:///"+qApp->applicationDirPath()+QDir::separator()+"theme"+QDir::separator()+"stylesheet.css");
+    app.setStyleSheet("file:///"+qApp->applicationDirPath()+QDir::separator()+"theme"+QDir::separator()+"default"+QDir::separator()+"stylesheet.css");
     return app.exec();
 }

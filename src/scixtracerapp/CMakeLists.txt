@@ -16,11 +16,23 @@ project(scixtracerapp)
 ## #################################################################
 
 SET(SRC_FILES  
-  SxExperimentWidget.cpp
+  SxExperimentComponent.cpp
+  SxMetadataExperimentStates.cpp
+  SxProcessedDataStates.cpp
+  SxRawDataComponent.cpp
+  SxRawDataContainer.cpp
+  SxRawDataStates.cpp
+  SxRunStates.cpp
 )
 
 SET(HEADERS_FILES
-  SxExperimentWidget.h
+  SxExperimentComponent.h
+  SxMetadataExperimentStates.h
+  SxProcessedDataStates.h
+  SxRawDataComponent.h
+  SxRawDataContainer.h
+  SxRawDataStates.h
+  SxRunStates.h
 )
   
 ## #################################################################
@@ -29,7 +41,7 @@ SET(HEADERS_FILES
 
 add_library(${PROJECT_NAME} ${SRC_FILES} ${HEADERS_FILES})
 
-target_link_libraries(${PROJECT_NAME} ${SL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} scixtracercpp sxframework ${SL_LIBRARIES})
 
 
 ## #################################################################

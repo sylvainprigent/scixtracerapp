@@ -1,5 +1,5 @@
-/// \file SxExperimentWidget.h
-/// \brief SxExperimentWidget class
+/// \file SxfAction.h
+/// \brief SxfAction class
 /// \author Sylvain Prigent
 /// \version 0.1
 /// \date 2021
@@ -14,13 +14,13 @@
 
 /// \class SxAction
 /// \brief Contains instructions for a GUI action (click...)
-class SXFRAMEWORK_EXPORT SxAction : public SxfObject{ 
+class SXFRAMEWORK_EXPORT SxfAction : public SxfObject{ 
 
     Q_OBJECT
 
 public:
-    SxAction(const QString& state);
-    ~SxAction();
+    SxfAction(const QString& state);
+    ~SxfAction();
 
 public:
     void setState(const QString& state);

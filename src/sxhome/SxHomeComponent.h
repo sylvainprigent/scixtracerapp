@@ -17,7 +17,7 @@
 
 /// \class SxHomeComponent
 /// \brief GUI component for a home view (tiles and navbar)
-class SXHOME_EXPORT SxHomeComponent : public SxComponent{ 
+class SXHOME_EXPORT SxHomeComponent : public SxfComponent{ 
 
     Q_OBJECT
 
@@ -28,7 +28,7 @@ public:
 public:
     /// \brief Trigerred when an action is emitted 
     /// \param[in] action Pointer to the action container
-    void update(SxAction* action);
+    void update(SxfAction* action);
     /// \brief Get the component graphical widget
     /// \return Pointer to the widget
     QWidget* getWidget();

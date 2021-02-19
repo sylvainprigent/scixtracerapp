@@ -16,23 +16,23 @@ project(sxframework)
 ## #################################################################
 
 SET(SRC_FILES  
-  SxAction.cpp
-  SxActuator.cpp
-  SxComponent.cpp
-  SxContainer.cpp
-  SxModel.cpp
+  SxfAction.cpp
+  SxfActuator.cpp
+  SxfComponent.cpp
+  SxfContainer.cpp
+  SxfModel.cpp
   SxfObject.cpp
-  SxStates.cpp
+  SxfStates.cpp
 )
 
 SET(HEADERS_FILES
-  SxAction.h
-  SxActuator.h
-  SxComponent.h
-  SxContainer.h
-  SxModel.h
+  SxfAction.h
+  SxfActuator.h
+  SxfComponent.h
+  SxfContainer.h
+  SxfModel.h
   SxfObject.h
-  SxStates.h
+  SxfStates.h
 )
   
 ## #################################################################

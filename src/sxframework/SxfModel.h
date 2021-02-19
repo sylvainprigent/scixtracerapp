@@ -1,5 +1,5 @@
-/// \file SxActuator.h
-/// \brief SxActuator class
+/// \file SxfModel.h
+/// \brief SxfModel class
 /// \author Sylvain Prigent
 /// \version 0.1
 /// \date 2021
@@ -9,18 +9,18 @@
 #include <QtWidgets>
 
 #include "sxframeworkExport.h"
-#include "SxActuator.h"
+#include "SxfActuator.h"
 
-/// \class SxActuator
+/// \class SxfModel
 /// \brief Interface for model. Model interact with the percistance of data
-class SXFRAMEWORK_EXPORT SxModel : public SxActuator{ 
+class SXFRAMEWORK_EXPORT SxfModel : public SxfActuator{ 
 
     Q_OBJECT
 
 public:
-    SxModel();
-    ~SxModel();
+    SxfModel();
+    ~SxfModel();
 
-    virtual void update(SxAction* action) = 0;
+    virtual void update(SxfAction* action) = 0;
 
 };

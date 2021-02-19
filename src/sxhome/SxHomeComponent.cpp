@@ -6,7 +6,7 @@
 
 #include "SxHomeComponent.h"
 
-SxHomeComponent::SxHomeComponent() : SxComponent()
+SxHomeComponent::SxHomeComponent() : SxfComponent()
 {
     m_widget = new QWidget();
 
@@ -64,7 +64,7 @@ void SxHomeComponent::closeTab(int id){
     delete m_centralWidget->widget(id);
 }
 
-void SxHomeComponent::update(SxAction* action)
+void SxHomeComponent::update(SxfAction* action)
 {
     /// \todo implement actions
 }

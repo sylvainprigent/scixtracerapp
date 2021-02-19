@@ -1,1 +1,1 @@
-#include "../src/scixtracerapp/SxExperimentWidget.h"
+#include "../src/scixtracerapp/SxExperimentComponent.h"
