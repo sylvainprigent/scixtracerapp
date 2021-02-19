@@ -5,6 +5,7 @@
 /// \date 2021
 
 #include "SxRawDataComponent.h"
+#include "SxRawDataStates.h"
 
 SxRawDataComponent::SxRawDataComponent(SxRawDataContainer* container) : SxfComponent()
 {
@@ -74,47 +75,57 @@ SxRawDataComponent::SxRawDataComponent(SxRawDataContainer* container) : SxfCompo
 
 void SxRawDataComponent::saveButtonClicked()
 {
-    /*
-        self.container.rawdata.metadata.name = self.nameEdit.text()
-        self.container.rawdata.metadata.format = self.formatEdit.text()
-        self.container.rawdata.metadata.date = self.dateEdit.text()
-        self.container.rawdata.metadata.author = self.authorEdit.text()
+    SxRawData* data = m_container->get_rawdata();
+    data->set_name(m_nameEdit->text());
+    data->set_format(new SxFormat(m_formatEdit->text()));
+    data->set_date(new SxDate(m_dateEdit->text()));
+    data->set_author(new SxUser(m_authorEdit->text()));
 
-        for key in self.tagWidgets:
-            self.container.rawdata.metadata.tags[key] = self.tagWidgets[key].text()
+    /// \todo implement tags widget
+    //for key in self.tagWidgets:
+    //    self.container.rawdata.metadata.tags[key] = self.tagWidgets[key].text()
 
-        self.container.emit(BiRawDataStates.SaveClicked)
-        */
+    m_container->send(SxRawDataStates::SaveClicked);
 }
 
 void SxRawDataComponent::update(SxfAction* action)
 {
-    /*
-        if action.state == BiRawDataStates.Loaded:
-            self.nameEdit.setText(self.container.rawdata.metadata.name)
-            self.formatEdit.setText(self.container.rawdata.metadata.format)
-            self.dateEdit.setText(self.container.rawdata.metadata.date)
-            self.authorEdit.setText(self.container.rawdata.metadata.author)
-            self.uriEdit.setText(self.container.rawdata.metadata.uri)
+    if (action->state() == SxRawDataStates::Loaded)
+    {
+        // metadata
+        m_nameEdit->setText(m_container->get_rawdata()->get_name());
+        m_formatEdit->setText(m_container->get_rawdata()->get_format()->get_name());
+        m_dateEdit->setText(m_container->get_rawdata()->get_date()->get_to_string("YYYY-MM-DD"));
+        m_authorEdit->setText(m_container->get_rawdata()->get_author()->get_username());
+        m_uriEdit->setText(m_container->get_rawdata()->get_md_uri());
 
-            # tags
-            for i in reversed(range(self.tagsLayout.count())): 
-                self.tagsLayout.itemAt(i).widget().deleteLater()
-            self.tagWidgets = {}
-            row_idx = -1    
-            for key in self.container.rawdata.metadata.tags:
-                label = QLabel(key)
-                edit = QLineEdit(self.container.rawdata.metadata.tags[key])
-                row_idx += 1
-                self.tagsLayout.addWidget(label, row_idx, 0) 
-                self.tagsLayout.addWidget(edit, row_idx, 1)
-                self.tagWidgets[key] = edit
+        // tags
+        for(int i = m_tagsLayout->count()-1 ; i >= 0 ; --i)
+        {
+            m_tagsLayout->itemAt(i)->widget()->deleteLater();
+        }
+        m_tagWidgets.clear();
+        int row_idx = -1;
+        SxTags* tags = m_container->get_rawdata()->get_tags();   
+        QStringList keys = tags->get_keys();
+        for (int i = 0 ; i < tags->get_count() ; ++i)
+        {
+            QLabel* label = new QLabel(keys[i]);
+            QLineEdit* edit = new QLineEdit(tags->get_tag(keys[i]));
+            row_idx += 1;
+            m_tagsLayout->addWidget(label, row_idx, 0);
+            m_tagsLayout->addWidget(edit, row_idx, 1); 
+            m_tagWidgets[keys[i]] = edit;
+        }
+    }
 
-        if action.state == BiRawDataStates.Saved:
-            msgBox = QMessageBox()
-            msgBox.setText("Metadata have been saved")
-            msgBox.exec()  
-            */
+    if (action->state() == SxRawDataStates::Saved)
+    {
+        QMessageBox msgBox;
+        msgBox.setText("Metadata have been saved.");
+        msgBox.exec();
+    }
+
 }          
 
 QWidget* SxRawDataComponent::getWidget()

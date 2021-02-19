@@ -17,21 +17,33 @@ project(scixtracerapp)
 
 SET(SRC_FILES  
   SxExperimentComponent.cpp
+  SxMetadataExperimentComponent.cpp
+  SxMetadataExperimentContainer.cpp
   SxMetadataExperimentStates.cpp
+  SxMetadataRunComponent.cpp
+  SxProcessedDataComponent.cpp
+  SxProcessedDataContainer.cpp
   SxProcessedDataStates.cpp
   SxRawDataComponent.cpp
   SxRawDataContainer.cpp
   SxRawDataStates.cpp
+  SxRunDataContainer.cpp
   SxRunStates.cpp
 )
 
 SET(HEADERS_FILES
   SxExperimentComponent.h
+  SxMetadataExperimentComponent.h
+  SxMetadataExperimentContainer.h
   SxMetadataExperimentStates.h
+  SxMetadataRunComponent.h
+  SxProcessedDataComponent.h
+  SxProcessedDataContainer.h
   SxProcessedDataStates.h
   SxRawDataComponent.h
   SxRawDataContainer.h
   SxRawDataStates.h
+  SxRunDataContainer.h
   SxRunStates.h
 )
   

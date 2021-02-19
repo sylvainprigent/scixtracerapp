@@ -1,5 +1,5 @@
-/// \file SxRawDataComponent.h
-/// \brief SxRawDataComponent class
+/// \file SxProcessedDataComponent.h
+/// \brief SxProcessedDataComponent class
 /// \author Sylvain Prigent
 /// \version 0.1
 /// \date 2021
@@ -8,18 +8,18 @@
 
 #include <sxframework>
 
-#include "SxRawDataContainer.h"
+#include "SxProcessedDataContainer.h"
 
 #include "scixtracerappExport.h"
 
-/// \class SxRawDataComponent
+/// \class SxProcessedDataComponent
 /// \brief Main component to manipulate SxExperiment metadata
-class SCIXTRACERAPP_EXPORT SxRawDataComponent : public SxfComponent{ 
+class SCIXTRACERAPP_EXPORT SxProcessedDataComponent : public SxfComponent{ 
 
     Q_OBJECT
 
 public:
-    SxRawDataComponent(SxRawDataContainer* container);
+    SxProcessedDataComponent(SxProcessedDataContainer* container);
 
 public:
     /// \brief Trigerred when an action is emitted 
@@ -29,19 +29,22 @@ public:
     /// \return Pointer to the widget
     QWidget* getWidget();
 
-protected slots:
-    void saveButtonClicked();
+private slots:
+    void emitRun();
 
-protected:
-    SxRawDataContainer* m_container;
+private:
+    SxProcessedDataContainer* m_container;
 
-protected:
-    QScrollArea *m_widget;
-    QMap<QString, QLineEdit*> m_tagWidgets;
+private:
+    QScrollArea* m_widget;
     QLineEdit* m_uriEdit;
     QLineEdit* m_nameEdit;
-    QLineEdit* m_formatEdit;
-    QLineEdit* m_dateEdit;
     QLineEdit* m_authorEdit;
+    QLineEdit* m_dateEdit;
+    QLineEdit* m_formatEdit;
+    QLineEdit* m_outlabelEdit;
+    QLineEdit* m_originEdit;
     QGridLayout* m_tagsLayout;
+    QMap<QString, QLineEdit*> m_tagWidgets;
+
 };
