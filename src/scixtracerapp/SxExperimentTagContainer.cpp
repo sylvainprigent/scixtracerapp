@@ -41,7 +41,7 @@ QStringList SxExperimentTagContainer::get_usingseparator_separator()
     return m_usingseparator_separator;
 }
 
-QStringList SxExperimentTagContainer::get_usingseparator_position()
+QList<int> SxExperimentTagContainer::get_usingseparator_position()
 {
     return m_usingseparator_position;
 } 
@@ -71,7 +71,7 @@ void SxExperimentTagContainer::set_usingseparator_separator(const QStringList& v
     m_usingseparator_separator = value;
 }
 
-void SxExperimentTagContainer::set_usingseparator_position(const QStringList& value)
+void SxExperimentTagContainer::set_usingseparator_position(const QList<int>& value)
 {
     m_usingseparator_position = value;
 }

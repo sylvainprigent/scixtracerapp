@@ -26,14 +26,14 @@ public:
     QStringList get_usingname_search();
     QStringList get_usingseparator_tags();
     QStringList get_usingseparator_separator();
-    QStringList get_usingseparator_position(); 
+    QList<int> get_usingseparator_position(); 
 
     void set_tags(const QStringList& value);
     void set_usingname_tag(const QString& value);
     void set_usingname_search(const QStringList& value);
     void set_usingseparator_tags(const QStringList& value);
     void set_usingseparator_separator(const QStringList& value);
-    void set_usingseparator_position(const QStringList& value); 
+    void set_usingseparator_position(const QList<int>& value); 
 
 private:
     QStringList m_tags;
@@ -41,5 +41,5 @@ private:
     QStringList m_usingname_search;
     QStringList m_usingseparator_tags;
     QStringList m_usingseparator_separator;
-    QStringList m_usingseparator_position; 
+    QList<int> m_usingseparator_position; 
 };
