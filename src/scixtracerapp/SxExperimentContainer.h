@@ -31,6 +31,7 @@ public:
     QString get_current_dataset_name();
     SxDataset* get_current_dataset();
     int get_clickedRow();
+    int get_progress();
 
     void set_experiment_uri(const QString value);
     void set_experiment(SxExperiment* value);
@@ -39,6 +40,7 @@ public:
     void set_current_dataset_name(const QString& value);
     void set_current_dataset(SxDataset* value);
     void set_clickedRow(const int& value);
+    void set_progress(const int& value);
 
 protected:
     QString m_experiment_uri;
@@ -48,4 +50,5 @@ protected:
     QString m_current_dataset_name;
     SxDataset* m_current_dataset;
     int m_clickedRow;
+    int m_progress;
 };

@@ -42,6 +42,7 @@ SET(SRC_FILES
   SxExperimentImportSingleDataComponent.cpp
   SxExperimentImportComponent.cpp
   SxExperimentCreateComponent.cpp
+  SxExperimentCreateContainer.cpp
   SxExperimentDataSetViewComponent.cpp
   SxExperimentDataSetListComponent.cpp
   SxExperimentToolbarComponent.cpp
@@ -75,6 +76,7 @@ SET(HEADERS_FILES
   SxExperimentImportSingleDataComponent.h
   SxExperimentImportComponent.h
   SxExperimentCreateComponent.h
+  SxExperimentCreateContainer.h
   SxExperimentDataSetViewComponent.h
   SxExperimentDataSetListComponent.h
   SxExperimentToolbarComponent.h
@@ -87,7 +89,7 @@ SET(HEADERS_FILES
 
 add_library(${PROJECT_NAME} ${SRC_FILES} ${HEADERS_FILES})
 
-target_link_libraries(${PROJECT_NAME} scixtracercpp sxframework ${SL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} scixtracercpp sxframework sxwidgets ${SL_LIBRARIES})
 
 
 ## #################################################################

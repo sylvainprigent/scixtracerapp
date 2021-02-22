@@ -28,7 +28,7 @@ bool SxExperimentImportContainer::get_dir_recursive()
     return m_dir_recursive;
 }
 
-QString SxExperimentImportContainer::get_dir_filter()
+int SxExperimentImportContainer::get_dir_filter()
 {
     return m_dir_filter;
 }
@@ -83,7 +83,7 @@ void SxExperimentImportContainer::set_dir_recursive(const bool& value)
     m_dir_recursive = value;
 }
 
-void SxExperimentImportContainer::set_dir_filter(const QString& value)
+void SxExperimentImportContainer::set_dir_filter(const int& value)
 {
     m_dir_filter = value;
 }

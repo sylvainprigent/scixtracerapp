@@ -24,7 +24,7 @@ public:
 public:
     QString get_dir_data_path();
     bool get_dir_recursive();
-    QString get_dir_filter();
+    int get_dir_filter();
     QString get_dir_filter_value();
     bool get_dir_copy_data();
     QString get_file_data_path();
@@ -36,7 +36,7 @@ public:
 
     void set_dir_data_path(const QString& value);
     void set_dir_recursive(const bool& value);
-    void set_dir_filter(const QString& value);
+    void set_dir_filter(const int& value);
     void set_dir_filter_value(const QString& value);
     void set_dir_copy_data(const bool& value);
     void set_file_data_path(const QString& value);
@@ -49,7 +49,7 @@ public:
 private:
     QString m_dir_data_path;
     bool m_dir_recursive;
-    QString m_dir_filter;
+    int m_dir_filter;
     QString m_dir_filter_value;
     bool m_dir_copy_data;
     QString m_file_data_path;

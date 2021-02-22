@@ -16,19 +16,23 @@ project(sxwidgets)
 ## #################################################################
 
 SET(SRC_FILES  
+  SxButton.cpp
   SxClickableIcon.cpp
   SxClosableButton.cpp 
   SxFlowLayout.cpp
   SxHideableWidget.cpp
   SxSlidingStackedWidget.cpp
+  SxTagWidget.cpp
 )
 
 SET(HEADERS_FILES
+  SxButton.h
   SxClickableIcon.h
   SxClosableButton.h
   SxFlowLayout.h
   SxHideableWidget.h
   SxSlidingStackedWidget.h
+  SxTagWidget.h
 )
   
 ## #################################################################

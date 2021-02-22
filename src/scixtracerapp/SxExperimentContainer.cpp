@@ -50,6 +50,11 @@ int SxExperimentContainer::get_clickedRow()
     return m_clickedRow;
 }
 
+int SxExperimentContainer::get_progress()
+{
+    return m_progress;
+}
+
 void SxExperimentContainer::set_experiment_uri(const QString value)
 {
     m_experiment_uri = value;
@@ -83,4 +88,9 @@ void SxExperimentContainer::set_current_dataset(SxDataset* value)
 void SxExperimentContainer::set_clickedRow(const int& value)
 {
     m_clickedRow = value;
+}
+
+void SxExperimentContainer::set_progress(const int& value)
+{
+    m_progress = value;
 }
