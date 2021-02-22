@@ -32,7 +32,7 @@ SET(SRC_FILES
   SxRawDataComponent.cpp
   SxRawDataContainer.cpp
   SxRawDataStates.cpp
-  SxRunDataContainer.cpp
+  SxRunContainer.cpp
   SxRunStates.cpp
   SxExperimentTagsUsingNameComponent.cpp
   SxExperimentTagsUsingSeparatorsComponent.cpp
@@ -47,6 +47,12 @@ SET(SRC_FILES
   SxExperimentDataSetListComponent.cpp
   SxExperimentToolbarComponent.cpp
   SxExperimentComponent.cpp
+  SxRawDataModel.cpp
+  SxProcessedDataModel.cpp
+  SxRunModel.cpp
+  SxMetadataExperimentModel.cpp
+  SxExperimentModel.cpp
+  SxExperimentCreateModel.cpp
 )
 
 SET(HEADERS_FILES
@@ -66,7 +72,7 @@ SET(HEADERS_FILES
   SxRawDataComponent.h
   SxRawDataContainer.h
   SxRawDataStates.h
-  SxRunDataContainer.h
+  SxRunContainer.h
   SxRunStates.h
   SxExperimentTagsUsingNameComponent.h
   SxExperimentTagsUsingSeparatorsComponent.h
@@ -81,6 +87,12 @@ SET(HEADERS_FILES
   SxExperimentDataSetListComponent.h
   SxExperimentToolbarComponent.h
   SxExperimentComponent.h
+  SxRawDataModel.h
+  SxProcessedDataModel.h
+  SxRunModel.h
+  SxMetadataExperimentModel.h
+  SxExperimentModel.h
+  SxExperimentCreateModel.h
 )
   
 ## #################################################################

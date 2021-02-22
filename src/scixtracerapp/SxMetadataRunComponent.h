@@ -8,7 +8,7 @@
 
 #include <sxframework>
 
-#include "SxRunDataContainer.h"
+#include "SxRunContainer.h"
 
 #include "scixtracerappExport.h"
 
@@ -19,7 +19,7 @@ class SCIXTRACERAPP_EXPORT SxMetadataRunComponent : public SxfComponent{
     Q_OBJECT
 
 public:
-    SxMetadataRunComponent(SxRunDataContainer* container);
+    SxMetadataRunComponent(SxRunContainer* container);
 
 public:
     /// \brief Trigerred when an action is emitted 
@@ -30,7 +30,7 @@ public:
     QWidget* getWidget();
 
 private:
-    SxRunDataContainer* m_container;
+    SxRunContainer* m_container;
 
 private:
     QScrollArea* m_widget;
